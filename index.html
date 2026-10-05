@@ -2,6 +2,15 @@
 <html lang="ja" class="nojs">
 <head>
 <meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J362N855HM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-J362N855HM');
+</script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>TAKUYA｜縮毛矯正した髪へのブリーチ・原宿（GO TODAY 原宿本店）</title>
 <meta name="description" content="縮毛矯正した髪へのブリーチを担当する原宿の美容師TAKUYA（GO TODAY 原宿本店・美容師歴6年）。年間700件の施術のうち、お断りしたのは2件だけ。10種類の薬剤から、一人ひとりに合わせて施術工程を変えます。料金は内訳つきの税込総額で掲載。">
@@ -679,6 +688,36 @@ footer{padding:48px 0;text-align:center;font-family:var(--latin);font-size:13px;
     if(r.bottom<0||r.top>vh) return;
     var p=(r.top+r.height/2-vh/2)/vh; band.style.transform='translateY('+(p*-110)+'px) scale(1.2)';
   },{passive:true});}
+})();
+</script>
+
+<script>
+(function(){
+  if(typeof gtag!=='function') return;
+  function where(el){
+    if(el.closest('.sticky')) return 'sticky';
+    if(el.closest('.hero')) return 'hero';
+    var sec=el.closest('section'); return sec&&sec.id?sec.id:'other';
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a'); if(!a) return;
+    var t=a.textContent, h=a.getAttribute('href')||'', ev=null;
+    if(/LINE/.test(t)) ev='line_click';
+    else if(h.indexOf('/review')>-1) ev='review_click';
+    else if(h.indexOf('instagram.com')>-1) ev='instagram_click';
+    else if(h.indexOf('stekina.com')>-1) ev='reserve_click';
+    if(ev) gtag('event',ev,{link_location:where(a),link_text:t.trim().slice(0,40)});
+  });
+  document.querySelectorAll('details').forEach(function(d){
+    d.addEventListener('toggle',function(){ if(d.open){ var q=d.querySelector('summary'); gtag('event','faq_open',{question:q?q.textContent.trim().slice(0,60):''}); } });
+  });
+  if('IntersectionObserver' in window){
+    var seen={};
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      var id=e.target.id; if(e.isIntersecting&&!seen[id]){seen[id]=1; gtag('event','section_view',{section:id}); io.unobserve(e.target);}
+    })},{threshold:0.35});
+    document.querySelectorAll('main section[id]').forEach(function(sec){io.observe(sec)});
+  }
 })();
 </script>
 </body>
