@@ -158,15 +158,15 @@
 
 <style>
 :root{
-  --bg:#17120e;
-  --bg-2:#1f1813;
-  --surface:#251d17;
-  --text:#efe6da;
-  --muted:#b3a593;
-  --line:rgba(239,230,218,.14);
-  --accent:#d2b48c;
+  --bg:#f0e2cd;
+  --bg-2:#e8d5ba;
+  --surface:#faf0e1;
+  --text:#3a291d;
+  --muted:#876b52;
+  --line:rgba(122,86,56,.18);
+  --accent:#93683a;
   --accent-soft:rgba(210,180,140,.12);
-  --cream:#e9dcc6;
+  --cream:#2f2219;
   --serif:"Shippori Mincho","Cormorant Garamond",serif;
   --latin:"Cormorant Garamond",serif;
 }
@@ -178,7 +178,7 @@ a{color:inherit}
 section{padding:96px 0;position:relative}
 section:nth-of-type(even){background:var(--bg-2)}
 section+section::before{content:"";position:absolute;top:0;left:50%;width:1px;height:48px;background:var(--line);transform:translateX(-50%)}
-.eyebrow{display:block;font-family:var(--latin);font-style:italic;font-weight:400;font-size:clamp(52px,14vw,96px);line-height:1;color:rgba(239,230,218,.07);letter-spacing:.02em;margin-bottom:-.55em;pointer-events:none;white-space:nowrap}
+.eyebrow{display:block;font-family:var(--latin);font-style:italic;font-weight:400;font-size:clamp(52px,14vw,96px);line-height:1;color:rgba(122,86,56,.08);letter-spacing:.02em;margin-bottom:-.55em;pointer-events:none;white-space:nowrap}
 h2{position:relative;font-family:var(--serif);font-weight:500;font-size:22px;line-height:1.7;letter-spacing:.08em;margin:0 0 28px;color:var(--cream)}
 h3,h4{font-family:var(--serif);font-weight:500}
 p+p{margin-top:14px}
@@ -188,7 +188,7 @@ dd a,.muted a{color:var(--accent)}
 /* hero */
 .hero{position:relative;padding:120px 0 80px;overflow:hidden;background:var(--bg)}
 .hero::before{content:"";position:absolute;inset:0;background:url(images/salon-corridor.jpg) center top/cover no-repeat;transform-origin:50% 30%;z-index:0}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(23,18,14,.35) 0%,rgba(23,18,14,.72) 38%,rgba(23,18,14,.94) 70%,var(--bg) 100%);z-index:0}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(240,226,205,.22) 0%,rgba(240,226,205,.66) 38%,rgba(240,226,205,.92) 70%,var(--bg) 100%);z-index:0}
 .hero .wrap{position:relative;z-index:1}
 .hero .portrait{display:block;width:150px;height:150px;margin-bottom:28px;filter:saturate(.9);box-shadow:0 0 0 1px var(--line),0 0 60px rgba(210,170,120,.18);border-radius:50%}
 .hero .affil{font-size:12px;color:var(--muted);letter-spacing:.16em}
@@ -197,10 +197,10 @@ dd a,.muted a{color:var(--accent)}
 .hero .sub{color:var(--muted);font-size:14px}
 .hero .ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
 .btn{display:inline-block;text-decoration:none;padding:14px 30px;font-weight:400;font-size:14px;letter-spacing:.12em;border-radius:2px;transition:background .3s,color .3s}
-.btn-primary{background:var(--cream);color:#1d1611}
-.btn-primary:hover{background:#fff}
-.btn-ghost{border:1px solid rgba(239,230,218,.5);color:var(--text)}
-.btn-ghost:hover{background:rgba(239,230,218,.08)}
+.btn-primary{background:linear-gradient(135deg,#4a3627,#2f2219);color:#f6ecdd;box-shadow:0 10px 24px -12px rgba(74,54,39,.6)}
+.btn-primary:hover{background:linear-gradient(135deg,#5a4230,#3a2a1f)}
+.btn-ghost{border:1px solid rgba(74,54,39,.45);color:var(--text)}
+.btn-ghost:hover{background:rgba(122,86,56,.06)}
 
 /* numbered points */
 .points{list-style:none;counter-reset:p;display:grid;gap:0;margin-top:28px;border-top:1px solid var(--line)}
@@ -258,7 +258,7 @@ table.long tr:last-child td{border-bottom:none}
 .band::before,.band::after{content:"";position:absolute;left:0;right:0;height:28%;z-index:1;pointer-events:none}
 .band::before{top:0;background:linear-gradient(var(--bg-2),transparent)}
 .band::after{bottom:0;background:linear-gradient(transparent,var(--bg))}
-.band figcaption{position:absolute;z-index:2;right:24px;bottom:28px;font-family:var(--latin);font-size:14px;letter-spacing:.4em;color:rgba(239,230,218,.8)}
+.band figcaption{position:absolute;z-index:2;right:24px;bottom:28px;font-family:var(--latin);font-size:14px;letter-spacing:.4em;color:rgba(74,54,39,.7)}
 .gallery{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:8px 0 40px}
 .gallery img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
 .gallery figure:last-child{margin-top:56px}
@@ -284,7 +284,7 @@ footer{padding:48px 0;text-align:center;font-family:var(--latin);font-size:13px;
 .privacy{max-width:640px;margin:0 auto 20px;padding:0 20px;font-family:"Noto Sans JP",sans-serif;font-size:11px;line-height:1.8;letter-spacing:.02em;color:var(--muted);opacity:.8;text-align:left}
 
 /* sticky cta */
-.sticky{position:fixed;left:0;right:0;bottom:0;background:rgba(23,18,14,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:12px 16px calc(12px + env(safe-area-inset-bottom));z-index:10}
+.sticky{position:fixed;left:0;right:0;bottom:0;background:rgba(240,226,205,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:12px 16px calc(12px + env(safe-area-inset-bottom));z-index:10}
 .sticky .btn{display:block;text-align:center;max-width:480px;margin:0 auto}
 
 @media (max-width:480px){
@@ -354,6 +354,34 @@ footer{padding:48px 0;text-align:center;font-family:var(--latin);font-size:13px;
 @media (prefers-reduced-motion:reduce){
   .js .hero *,.js .hero::before,.js .reveal,.js .reveal-img img,.js .eyebrow{opacity:1!important;transform:none!important;animation:none!important;transition:none!important;filter:none!important}
 }
+
+/* warm & relaxing light layer (color only) */
+body{background:radial-gradient(ellipse 90% 40% at 100% 0%,rgba(214,160,95,.26),transparent 60%),var(--bg)}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:30;opacity:.35;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .55  0 0 0 0 .42  0 0 0 0 .30  0 0 0 .09 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+section{background-image:radial-gradient(ellipse 70% 45% at 88% 8%,rgba(226,170,100,.24),transparent 70%)}
+section:nth-of-type(even){background-image:radial-gradient(ellipse 70% 45% at 12% 10%,rgba(226,170,100,.26),transparent 70%)}
+.hero::after{background:radial-gradient(ellipse 80% 45% at 80% 5%,rgba(236,180,105,.38),transparent 70%),linear-gradient(180deg,rgba(240,226,205,.22) 0%,rgba(240,226,205,.66) 38%,rgba(240,226,205,.92) 70%,var(--bg) 100%)}
+.hero::before{filter:sepia(.35) saturate(.9) brightness(1.04)}
+.ba img,.gallery img,.band img{filter:sepia(.18) saturate(.95) brightness(1.02)}
+.hero .portrait{box-shadow:0 0 0 1px rgba(154,112,70,.35),0 18px 50px -18px rgba(122,86,56,.45)}
+.card,.case-card{box-shadow:0 20px 40px -30px rgba(90,62,40,.35);border-color:rgba(154,112,70,.22)}
+section+section::before{background:linear-gradient(rgba(154,112,70,0),rgba(154,112,70,.55))}
+.stats{border-color:rgba(154,112,70,.35)}
+
+/* champagne-gold luxury accents */
+:root{--gold:linear-gradient(90deg,rgba(176,132,74,0),rgba(176,132,74,.75) 50%,rgba(176,132,74,0))}
+section{position:relative}
+section::after{content:"";position:absolute;left:10%;right:10%;top:0;height:1px;background:var(--gold);opacity:.55}
+.stats{border-image:linear-gradient(90deg,rgba(176,132,74,.15),rgba(176,132,74,.7),rgba(176,132,74,.15)) 1}
+.stats b,.card .price{background:linear-gradient(180deg,#5a3f28 0%,#2f2116 60%,#7a5634 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn-primary{box-shadow:inset 0 0 0 1px rgba(214,176,120,.55),0 12px 28px -12px rgba(74,50,30,.65)}
+.btn-ghost{border-color:rgba(147,104,58,.6)}
+.card,.case-card{background:linear-gradient(160deg,#fbf3e6,#f4e6d2);border-color:rgba(176,132,74,.35)}
+.points li::before,.flow li::before{color:#93683a}
+.flow li::before{border-color:rgba(176,132,74,.7)}
+.hero{box-shadow:inset 0 -80px 120px -60px rgba(120,80,40,.12)}
+.sticky{border-top-color:rgba(176,132,74,.35)}
 </style>
 </head>
 <body>
