@@ -39,6 +39,12 @@
         "addressLocality": "渋谷区",
         "streetAddress": "神宮前1-14-34 FPG Links Harajuku 6F・7F",
         "addressCountry": "JP"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "10:00",
+        "closes": "23:00"
       }
     },
     {
@@ -46,7 +52,7 @@
       "@id": "#takuya",
       "name": "TAKUYA",
       "jobTitle": "美容師",
-      "description": "GO TODAY 原宿本店所属、美容師歴6年。縮毛矯正をかけた髪へのブリーチ・ハイトーンカラーを担当。年間700件の施術のうち、お断りしたのは2件。10種類の薬剤から、一人ひとりに合わせて施術工程を変える。髪の体力・弾力・太さ・手触り・薬剤の残留・断面の6つの視点で髪を見る。",
+      "description": "GO TODAY 原宿本店所属、美容師歴6年。縮毛矯正をかけた髪へのブリーチ・ハイトーンカラーを担当。年間700件の施術のうち、お断りしたのは2件。10種類の薬剤から、一人ひとりに合わせて施術工程を変える。施術できるかは「髪の履歴」と「髪の体力（毛髪テスト）」の2点で判断する。LINE相談は無料、返信はその日のうち。",
       "worksFor": {
         "@id": "#salon"
       },
@@ -83,7 +89,7 @@
           "name": "縮毛矯正をかけた髪にブリーチをしてボロボロになりませんか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "施術できるかどうかは、事前に髪の状態を見て判断します。判断のポイントは「希望のスタイル」「縮毛矯正をかけた時期」「これまでの施術履歴（黒染め・ブリーチ・カラー）」「毛髪の体力」「家でのアイロンの使い方（使っているアイロンと頻度）」の5点です。毛髪の体力は「毛髪テスト」で確かめます。"
+            "text": "施術できるかどうかは、事前に髪の状態を見て判断します。判断のポイントは「髪の履歴（縮毛矯正をかけた時期、黒染め・ブリーチ・カラーの回数）」と「髪の体力」の2点です。髪の体力は「毛髪テスト」で確かめます。"
           }
         },
         {
@@ -115,7 +121,7 @@
           "name": "トリートメントのメニューはありますか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "トリートメントは扱っていません。すぐに落ちてしまい、きれいな状態を維持できないためです。綺麗に維持するために、プレミアム髪質改善をお勧めいたします。"
+            "text": "トリートメントは扱っていません。すぐに落ちてしまい、きれいな状態を維持できないためです。きれいに維持するために、プレミアム髪質改善をおすすめいたします。"
           }
         },
         {
@@ -211,6 +217,7 @@ dd a,.muted a{color:var(--accent)}
 .chips span{border:1px solid var(--line);border-radius:999px;padding:8px 18px;font-family:var(--serif);font-size:15px;color:var(--cream)}
 .chips small{color:var(--muted);font-size:11px;margin-left:2px}
 
+.points .point-note{font-family:"Noto Sans JP",sans-serif;font-size:14px;color:var(--muted);margin-top:6px;line-height:1.8}
 .points small{font-family:"Noto Sans JP",sans-serif;font-size:12px;color:var(--muted);margin-left:4px}
 
 /* menu */
@@ -311,7 +318,6 @@ footer{padding:48px 0;text-align:center;font-family:var(--latin);font-size:13px;
 .worries li::before{content:"";position:absolute;left:6px;top:24px;width:12px;height:12px;border:1px solid var(--accent);border-radius:50%}
 
 .sub-h{font-size:17px;color:var(--accent);margin:48px 0 16px;letter-spacing:.08em}
-#reason h2+.sub-h{margin-top:8px}
 
 /* flow */
 .flow{list-style:none;counter-reset:f;position:relative}
@@ -436,7 +442,7 @@ section::after{content:"";position:absolute;left:10%;right:10%;top:0;height:1px;
         <dl class="case-meta">
           <dt>メニュー</dt><dd>ブリーチ2回＋ワンカラー<br><small class="care-inc">（ケアブリーチ＋ケアカラー＋プレミアム髪質改善）</small></dd>
           <dt>髪の履歴</dt><dd>縮毛矯正から1ヶ月。縮毛矯正を理由に他店でブリーチを断られた</dd>
-          <dt>料金</dt><dd>¥39,600（税込・ロング料金込み）</dd>
+          <dt>料金</dt><dd>¥39,600（税込・ロング料金 鎖骨下を含む）</dd>
           <dt>所要時間</dt><dd>約5時間</dd>
           <dt>ポイント</dt><dd>細い髪のため、ブリーチの力を弱めて、ゆっくり明るくしました</dd>
         </dl>
@@ -450,9 +456,9 @@ section::after{content:"";position:absolute;left:10%;right:10%;top:0;height:1px;
         <dl class="case-meta">
           <dt>メニュー</dt><dd>ブリーチ1回＋ワンカラー<br><small class="care-inc">（ケアブリーチ＋ケアカラー＋プレミアム髪質改善）</small></dd>
           <dt>髪の履歴</dt><dd>縮毛矯正から3ヶ月。他店で縮毛矯正の髪にブリーチ2回をして、切れ毛が出ていた</dd>
-          <dt>料金</dt><dd>¥33,000（税込・ロング料金込み）</dd>
+          <dt>料金</dt><dd>¥33,000（税込・ロング料金 鎖骨下を含む）</dd>
           <dt>所要時間</dt><dd>約4時間</dd>
-          <dt>ポイント</dt><dd>切れ毛を抑えるように薬剤を調整。プレミアム髪質改善で、家に帰ってからも切れ毛を起きにくくします</dd>
+          <dt>ポイント</dt><dd>切れ毛を抑えるように薬剤を調整。プレミアム髪質改善で、家に帰ってからも切れ毛が起きにくくなるようにします</dd>
         </dl>
       </article>
       <article class="case-card" style="margin-top:16px">
@@ -464,12 +470,12 @@ section::after{content:"";position:absolute;left:10%;right:10%;top:0;height:1px;
         <dl class="case-meta">
           <dt>メニュー</dt><dd>ブリーチ1回＋ワンカラー<br><small class="care-inc">（ケアブリーチ＋ケアカラー＋プレミアム髪質改善）</small></dd>
           <dt>髪の履歴</dt><dd>縮毛矯正から2週間。ブリーチなしのダブルカラーを1回。パサついて、きれいに見えないのが悩み</dd>
-          <dt>料金</dt><dd>¥33,000（税込・ロング料金込み）</dd>
+          <dt>料金</dt><dd>¥33,000（税込・ロング料金 鎖骨下を含む）</dd>
           <dt>所要時間</dt><dd>約4時間</dd>
           <dt>ポイント</dt><dd>髪の体力を減らさないように、塗る時間と置く時間を調整しました</dd>
         </dl>
       </article>
-      <p style="margin-top:20px"><a class="btn btn-ghost" href="https://stekina.com/profile/RUUV-X277/review" target="_blank" rel="noopener">お客様の口コミを見る（STEKiNA・6件）</a></p>
+      <p style="margin-top:20px"><a class="btn btn-ghost" href="https://stekina.com/profile/RUUV-X277/review" target="_blank" rel="noopener">お客様の口コミを見る（STEKiNA）</a></p>
       <p class="muted" style="margin-top:14px">ほかの事例は <a href="https://www.instagram.com/takuya___hair/" target="_blank" rel="noopener">Instagram @takuya___hair</a> で紹介しています。</p>
     </div>
   </section>
@@ -482,14 +488,15 @@ section::after{content:"";position:absolute;left:10%;right:10%;top:0;height:1px;
   <section id="reason">
     <div class="wrap">
       <p class="eyebrow">Reason</p>
-      <h3 class="sub-h">髪の体力を、6つの視点で見る</h3>
-      <div class="chips">
-        <span>体力</span><span>弾力</span><span>太さ</span><span>手触り</span><span>薬剤の残留<small>（前回のカラー剤）</small></span><span>断面</span>
-      </div>
-      <p style="margin-top:20px">同じ「縮毛矯正した髪」でも、この6つで状態はまったく違います。だから10種類の薬剤から選び、置く時間も塗り方も、一人ひとり変えます。</p>
+      <h2>縮毛矯正した髪にブリーチできるかは、<br>この2点で判断します</h2>
+      <ol class="points">
+        <li>髪の履歴<p class="point-note">縮毛矯正をいつかけたのか。<br>黒染め、ブリーチ、カラーをどれくらいしてきたのか。</p></li>
+        <li>髪の体力<p class="point-note">同じ「縮毛矯正した髪」でも体力は一人ひとり違います。<br>施術前に毛髪テストで確かめます。</p></li>
+      </ol>
+      <p style="margin-top:20px">条件に合わない場合は、施術前に正直にお伝えします。</p>
 
       <h3 class="sub-h">お断りした2件について</h3>
-      <p>年間700件の施術のうち、お断りしたのは2件。どちらも「縮毛矯正＋黒染め＋ブリーチ3〜4回」の履歴がある髪でした。できない髪には、できないとはっきりお伝えします。</p>
+      <p>年間700件の施術のうち、お断りしたのは2件。どちらも「縮毛矯正＋黒染め＋ブリーチ3〜4回」の履歴がある髪でした。</p>
     </div>
   </section>
 
@@ -577,7 +584,7 @@ section::after{content:"";position:absolute;left:10%;right:10%;top:0;height:1px;
       <details open>
         <summary>縮毛矯正をかけた髪にブリーチをしてボロボロになりませんか？</summary>
         <div class="a">
-          <p>施術できるかどうかは、事前に髪の状態を見て判断します。判断のポイントは「希望のスタイル」「縮毛矯正をかけた時期」「これまでの施術履歴（黒染め・ブリーチ・カラー）」「毛髪の体力」「家でのアイロンの使い方（使っているアイロンと頻度）」の5点です。毛髪の体力は「毛髪テスト」で確かめます。</p>
+          <p>施術できるかどうかは、事前に髪の状態を見て判断します。判断のポイントは「髪の履歴（縮毛矯正をかけた時期、黒染め・ブリーチ・カラーの回数）」と「髪の体力」の2点です。髪の体力は「毛髪テスト」で確かめます。</p>
         </div>
       </details>
 
@@ -630,7 +637,7 @@ section::after{content:"";position:absolute;left:10%;right:10%;top:0;height:1px;
         <summary>トリートメントのメニューはありますか？</summary>
         <div class="a">
           <p>トリートメントは扱っていません。すぐに落ちてしまい、きれいな状態を維持できないためです。</p>
-          <p>綺麗に維持するために、プレミアム髪質改善をお勧めいたします。</p>
+          <p>きれいに維持するために、プレミアム髪質改善をおすすめいたします。</p>
         </div>
       </details>
 
@@ -649,8 +656,9 @@ section::after{content:"";position:absolute;left:10%;right:10%;top:0;height:1px;
       <p class="eyebrow">Consultation</p>
       <h2>できるかどうか不安な方は、<br>LINEで相談してください</h2>
       <p>縮毛矯正の時期や、これまでのカラー・ブリーチの履歴を教えてもらえれば、予約の前にお答えします。</p>
+      <p>相談は無料です。返信はその日のうちにします。</p>
       <p>下のボタンからSTEKiNAのページを開くと、LINEで僕とつながります。</p>
-      <p style="margin-top:24px"><a class="btn btn-ghost" href="https://stekina.com/profile/RUUV-X277" target="_blank" rel="noopener">LINEで相談する</a></p>
+      <p style="margin-top:24px"><a class="btn btn-ghost" href="https://stekina.com/profile/RUUV-X277" target="_blank" rel="noopener">STEKiNAからLINEで相談する</a></p>
     </div>
   </section>
 
